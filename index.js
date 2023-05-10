@@ -8,17 +8,15 @@
 
 // Don’t forget the space after the closing parentheses!
 
-const createPhoneNumber = (arr) => {
-    let endNum = []
-    let newPar = []
-   newPar.push(...arr.splice(0,3))
-   newPar.unshift("(")
-   newPar.push(")")
-      // console.log("NewPar:",newPar)
-    endNum.push(...arr)
-    endNum.splice(3, 0, "-")
-   // console.log("EndNum", endNum)
-   return newPar.join("")  + " " + endNum.join("") 
+const createPhoneNumber = arr => {
+  let endNum = []
+  let newPar = []
+  newPar.push(...arr.splice(0, 3))
+  newPar.unshift('(')
+  newPar.push(')')
+  endNum.push(...arr)
+  endNum.splice(3, 0, '-')
+  return newPar.join('') + ' ' + endNum.join('')
 }
 
-console.log(createPhoneNumber([9,7,2,8,6,7,5,3,0,9]))
+console.log(createPhoneNumber([9, 7, 2, 8, 6, 7, 5, 3, 0, 9]))
